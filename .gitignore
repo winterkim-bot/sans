@@ -1,0 +1,27 @@
+# OAuth 관련 민감한 파일들
+token.json
+token.pickle
+credentials.json
+oauth_config.json
+
+# 이메일 설정 파일
+email_config.json
+
+# Python 캐시
+__pycache__/
+*.py[cod]
+*$py.class
+
+# 환경 변수
+.env
+.env.local
+
+# IDE 설정
+.vscode/
+.idea/
+
+# macOS
+.DS_Store
+
+# 로그 파일
+*.log 

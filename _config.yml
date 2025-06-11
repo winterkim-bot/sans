@@ -1,0 +1,41 @@
+# Site settings
+title: AI News Blog
+email: iysin0102@gmail.com
+description: >-
+  구글에서 크롤링한 AI 뉴스를 자동으로 업데이트하는 블로그입니다.
+baseurl: ""
+url: "https://winterkim-bot.github.io/sans"
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - scripts/
+  - "*.py"
+  - "*.xlsx"
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /:categories/:year/:month/:day/:title/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "AI News Crawler" 
