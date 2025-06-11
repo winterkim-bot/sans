@@ -1,6 +1,5 @@
 # Site settings
 title: AI News Blog
-email: iysin0102@gmail.com
 description: >-
   구글에서 크롤링한 AI 뉴스를 자동으로 업데이트하는 블로그입니다.
 baseurl: ""
