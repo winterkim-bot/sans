@@ -18,15 +18,9 @@ body {
   font-size: 16px;
 }
 
-// Header styling - minimal like The Edit
+// Header styling - completely hidden
 .site-header {
-  border: none;
-  background-color: #fff;
-  padding: 30px 0;
-  
-  .site-title {
-    display: none;
-  }
+  display: none;
 }
 
 // Main content area
