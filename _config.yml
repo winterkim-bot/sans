@@ -1,7 +1,7 @@
 # Site settings
-title: AI News Blog
+title: "AI DAILY"
 description: >-
-  구글에서 크롤링한 AI 뉴스를 자동으로 업데이트하는 블로그입니다.
+  최신 AI 뉴스와 트렌드를 매일 큐레이션하는 뉴스 매거진
 baseurl: ""
 url: "https://winterkim-bot.github.io/sans"
 

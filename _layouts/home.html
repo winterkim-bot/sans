@@ -14,8 +14,17 @@ layout: default
     <ul class="post-list">
       {%- for post in site.posts -%}
       <li>
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+        {%- assign date_format = site.minima.date_format | default: "%Y. %m. %d" -%}
         <span class="post-meta">{{ post.date | date: date_format }}</span>
+        
+        {%- if post.categories.size > 0 -%}
+        <div class="post-categories">
+          {%- for category in post.categories -%}
+            <span class="category-tag">{{ category | upcase }}</span>
+          {%- endfor -%}
+        </div>
+        {%- endif -%}
+        
         <h3>
           {%- if post.source_url -%}
             <a class="post-link" href="{{ post.source_url }}" target="_blank" rel="noopener">
