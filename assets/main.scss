@@ -1,109 +1,158 @@
 @import "minima";
 
-// The Edit inspired design
+// The Edit inspired design - more accurate
 :root {
   --primary-color: #000;
-  --secondary-color: #666;
-  --accent-color: #f5f5f5;
-  --border-color: #e1e1e1;
+  --secondary-color: #999;
+  --accent-color: #f8f8f8;
+  --border-color: #eee;
   --hover-color: #333;
 }
 
-// Typography
+// Typography - closer to The Edit
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  line-height: 1.6;
+  line-height: 1.5;
   color: var(--primary-color);
   background-color: #fff;
+  font-size: 16px;
 }
 
-// Header styling
+// Header styling - minimal like The Edit
 .site-header {
-  border-top: none;
-  border-bottom: 1px solid var(--border-color);
+  border: none;
   background-color: #fff;
-  padding: 20px 0;
+  padding: 30px 0;
   
   .site-title {
-    font-size: 24px;
-    font-weight: 700;
+    font-size: 20px;
+    font-weight: 600;
     color: var(--primary-color);
     text-decoration: none;
+    letter-spacing: -0.5px;
     
     &:hover {
       text-decoration: none;
-      color: var(--hover-color);
+      color: var(--primary-color);
     }
   }
 }
 
 // Main content area
 .page-content {
-  padding: 40px 0;
+  padding: 0;
 }
 
 .wrapper {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 40px;
 }
 
-// Home page styling
+// Home page styling - remove default heading
 .home {
   .page-heading {
-    font-size: 32px;
-    font-weight: 700;
-    margin-bottom: 40px;
-    text-align: center;
+    display: none;
   }
 }
 
-// Post list styling inspired by The Edit
+// Hero section styling
+.hero-section {
+  text-align: center;
+  padding: 60px 0 80px;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 60px;
+  
+  h1 {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+    letter-spacing: -1px;
+  }
+  
+  p {
+    font-size: 16px;
+    color: var(--secondary-color);
+    max-width: 500px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+}
+
+// Post list styling - more like The Edit
 .post-list {
   list-style: none;
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 60px 40px;
   
   li {
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
-    overflow: hidden;
-    transition: all 0.3s ease;
-    background: #fff;
+    border: none;
+    background: none;
+    transition: none;
     
     &:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-      border-color: var(--hover-color);
+      transform: none;
+      box-shadow: none;
     }
   }
 }
 
-// Post meta and title styling
+// Post meta styling - like The Edit's category tags
 .post-meta {
   display: block;
-  font-size: 12px;
+  font-size: 11px;
   color: var(--secondary-color);
   text-transform: uppercase;
-  letter-spacing: 0.5px;
-  margin-bottom: 8px;
-  padding: 20px 20px 0;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+  font-weight: 500;
 }
 
+// Category tags - exactly like The Edit
+.post-categories {
+  margin-bottom: 12px;
+  
+  .category-tag {
+    display: inline-block;
+    background: none;
+    color: var(--secondary-color);
+    padding: 0;
+    border: none;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-right: 0;
+    text-decoration: none;
+    font-weight: 500;
+    
+    &:hover {
+      background: none;
+      color: var(--primary-color);
+    }
+    
+    &:after {
+      content: " ";
+      margin-right: 8px;
+    }
+  }
+}
+
+// Post title styling - The Edit style
 .post-list h3 {
-  margin: 0;
-  padding: 0 20px 20px;
+  margin: 0 0 20px 0;
   
   .post-link {
     color: var(--primary-color);
     text-decoration: none;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 600;
-    line-height: 1.4;
+    line-height: 1.3;
     display: block;
+    letter-spacing: -0.3px;
     
     &:hover {
       color: var(--hover-color);
@@ -112,39 +161,24 @@ body {
   }
 }
 
-// Category tags (if we want to add them later)
-.post-categories {
-  padding: 0 20px 15px;
-  
-  .category-tag {
-    display: inline-block;
-    background: var(--accent-color);
-    color: var(--secondary-color);
-    padding: 4px 8px;
-    border-radius: 4px;
-    font-size: 11px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    margin-right: 8px;
-    text-decoration: none;
-    
-    &:hover {
-      background: var(--border-color);
-    }
-  }
+// Remove post list heading
+.post-list-heading {
+  display: none;
 }
 
-// RSS subscribe styling
+// RSS subscribe styling - minimal
 .rss-subscribe {
   text-align: center;
-  margin-top: 60px;
-  padding-top: 40px;
+  margin-top: 100px;
+  padding-top: 60px;
   border-top: 1px solid var(--border-color);
   
   a {
     color: var(--secondary-color);
     text-decoration: none;
-    font-size: 14px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
     
     &:hover {
       color: var(--primary-color);
@@ -154,35 +188,62 @@ body {
 
 // Responsive design
 @media (max-width: 768px) {
+  .wrapper {
+    padding: 0 20px;
+  }
+  
+  .hero-section {
+    padding: 40px 0 60px;
+    
+    h1 {
+      font-size: 32px;
+    }
+    
+    p {
+      font-size: 14px;
+    }
+  }
+  
   .post-list {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 40px;
   }
   
-  .wrapper {
-    padding: 0 15px;
-  }
-  
-  .home .page-heading {
-    font-size: 28px;
-    margin-bottom: 30px;
+  .post-list h3 .post-link {
+    font-size: 18px;
   }
 }
 
-// Footer styling
+// Footer styling - minimal
 .site-footer {
   border-top: 1px solid var(--border-color);
-  padding: 40px 0;
-  background-color: var(--accent-color);
+  padding: 60px 0;
+  background-color: #fff;
+  margin-top: 100px;
   
   .footer-heading {
-    font-size: 18px;
+    font-size: 14px;
     margin-bottom: 15px;
+    color: var(--secondary-color);
   }
   
   .contact-list,
   .social-media-list {
     list-style: none;
     margin-left: 0;
+    
+    li {
+      margin-bottom: 8px;
+    }
+    
+    a {
+      color: var(--secondary-color);
+      font-size: 12px;
+      text-decoration: none;
+      
+      &:hover {
+        color: var(--primary-color);
+      }
+    }
   }
 } 
